@@ -2,9 +2,9 @@ namespace DesafioFundamentos.Models
 {
     public class Estacionamento
     {
-        private decimal precoInicial = 0;
-        private decimal precoPorHora = 0;
-        private List<string> veiculos = new List<string>();
+        private readonly decimal precoInicial = 0;
+        private readonly decimal precoPorHora = 0;
+        private readonly List<string> veiculos = [];
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
@@ -63,7 +63,7 @@ namespace DesafioFundamentos.Models
         public void ListarVeiculos()
         {
             // Verifica se há veículos no estacionamento
-            if (veiculos.Any())
+            if ( veiculos.Count != 0 )
             {
                 Console.WriteLine("Os veículos estacionados são:");
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
